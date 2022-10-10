@@ -1,4 +1,4 @@
-import {WalletConnectButton} from "@solana/wallet-adapter-react-ui";
+import {WalletMultiButton} from "@solana/wallet-adapter-react-ui";
 import React, {useEffect, useState} from "react";
 import {useConnection, useWallet} from "@solana/wallet-adapter-react";
 import {AppBar, Box, createTheme, ThemeProvider, Toolbar, Typography} from "@mui/material";
@@ -35,11 +35,10 @@ export const App = () => {
         <AppBar position={"static"}>
           <Toolbar>
           <Box flexGrow={1} />
-          <WalletConnectButton />
+          <WalletMultiButton />
           </Toolbar>
         </AppBar>
       </ThemeProvider>
-
       <Typography variant={"body1"}>Wallet address = {wallet.publicKey?.toBase58()} </Typography>
       <Typography variant={"body2"}>balance = {balance}</Typography>
     </>
